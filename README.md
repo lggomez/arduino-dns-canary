@@ -12,7 +12,7 @@ Materials:
 </p>
 
 ## Prototype:
-In this case I was lazy and decided to bundle it with the shield due to the amount of connections, but the above schematics still hold
+In this case I was lazy and decided to bundle it with the shield due to the amount of connections, but the above schematics still hold. Also, I know it sucks that both the power input and ethernet port are in opposite sides, but oh well, it's a prototype ;)
 
 <p align="center">
   <img src="/proto1.jpg" width="500">
@@ -21,3 +21,8 @@ In this case I was lazy and decided to bundle it with the shield due to the amou
 <p align="center">
   <img src="/proto2.jpg" width="500">
 </p>
+
+### Prototype demo:
+
+https://user-images.githubusercontent.com/6326271/110226338-1d4e5380-7ecd-11eb-903f-269993810ee7.mp4
+
