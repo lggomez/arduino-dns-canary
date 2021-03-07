@@ -15,9 +15,9 @@ Materials:
 In this case I was lazy and decided to bundle it with the shield due to the amount of connections, but the above schematics still hold
 
 <p align="center">
-  <img src="/proto1.jpeg" width="500">
+  <img src="/proto1.jpg" width="500">
 </p>
 
 <p align="center">
-  <img src="/proto2.jpeg" width="500">
+  <img src="/proto2.jpg" width="500">
 </p>
