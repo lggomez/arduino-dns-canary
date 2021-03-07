@@ -16,7 +16,7 @@ const char* const websites[] PROGMEM = { aws, speedtest, google };
 char site_buffer[38];
 
 EthernetClient client;
-LCD_I2C lcd(0x3F);
+LCD_I2C lcd(0x3F); // Initialize the device struct with its address
 
 void setup() {
   // Initialize led controller
@@ -31,11 +31,8 @@ void setup() {
 
   // Open serial communications and wait for port to open:
   Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
 
-  // start the Ethernet connection:
+  // Start the Ethernet connection:
   Serial.println("Initialize Ethernet with DHCP:");
   if (Ethernet.begin(mac) == 0) {
     lcd.setCursor(0, 1);
@@ -49,7 +46,7 @@ void setup() {
     } else {
       lcd.print("Unknown error");
     }
-    // no point in carrying on, so do nothing forevermore:
+    // No point in carrying on, so do nothing forevermore:
     while (true) {
       delay(1000);
     }
@@ -57,7 +54,7 @@ void setup() {
 
   lcd.clear();
 
-  // print your local IP address:
+  // Print your local IP address:
   Serial.print("My IP address: ");
   Serial.println(Ethernet.localIP());
 }
@@ -69,11 +66,11 @@ byte current_site = 0;
 
 void loop() {
   while (true) {
+    // Retrieve current website address from program memory
     strcpy_P(site_buffer, (char*)pgm_read_word(&(websites[current_site])));
 
     Serial.print("connecting to site ");
     Serial.println(site_buffer);
-    // if you get a connection, report back via serial:
 
     startTime = millis();
     int connResult = client.connect(site_buffer, 80);
