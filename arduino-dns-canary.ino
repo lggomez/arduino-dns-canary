@@ -68,10 +68,13 @@ void loop() {
   while (true) {
     // Retrieve current website address from program memory
     strcpy_P(site_buffer, (char*)pgm_read_word(&(websites[current_site])));
-
+    
     Serial.print("connecting to site ");
     Serial.println(site_buffer);
-
+    lcd.print(site_buffer);
+    lcd.setCursor(0, 1);
+    lcd.print("REQ...");
+    
     startTime = millis();
     int connResult = client.connect(site_buffer, 80);
     if (connResult == 1) {
@@ -80,7 +83,6 @@ void loop() {
       Serial.println(client.remoteIP());
       client.stop();
 
-      lcd.print(site_buffer);
       lcd.setCursor(0, 1);
       lcd.print("ACK: ");
       lcd.print(elapsedTime);
