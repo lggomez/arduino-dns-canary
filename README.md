@@ -22,6 +22,10 @@ In this case I was lazy and decided to bundle it with the shield due to the amou
   <img src="/proto2.jpg" width="500">
 </p>
 
+<p align="center">
+  <img src="/proto3.jpg" width="500">
+</p>
+
 ### Prototype demo:
 
 https://user-images.githubusercontent.com/6326271/110226338-1d4e5380-7ecd-11eb-903f-269993810ee7.mp4
